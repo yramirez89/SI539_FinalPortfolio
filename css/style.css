@@ -1,6 +1,6 @@
 body {
     padding: 1em;
-    background-color: #EEDF81;
+    background-color:#ffffa4;
     font-size: 15pt;
     font-family: 'Poppins', sans-serif;
     padding-top: 10px;
@@ -35,9 +35,9 @@ h2 {
 }
 
 p {
-    font-size: 10pt;
+    font-size: 12pt;
     font-weight: 200;
-    line-height: 2em;
+    line-height: 1.5em;
     text-rendering: optimizeLegibility;
     letter-spacing: 0em;
     margin-bottom: 1em;
@@ -56,6 +56,10 @@ p {
 .button{
     margin-top: 5em;
     margin-bottom: 3em;
+    font-size: 13pt;
+    font-weight: 600;
+    color:#d90f74;
+    text-decoration: none;
 }
 
 .button:hover{
@@ -100,16 +104,20 @@ nav ul{
     margin-left: 2em;
 }
 
-a{
+nav a{
     font-size: 13pt;
     font-weight: 600;
     color:#d90f74;
     text-decoration: none;
 }
 
-a:hover{
+nav a:hover{
     color: coral;
-    text-decoration: underline dashed #398AD7;
+    
+}
+
+nav .current{
+    text-decoration: underline double #398AD7;   
 }
 
 
@@ -117,6 +125,14 @@ a:hover{
 .footer{
     position: absolute;
     vertical-align: bottom;
+    
+
+}
+
+.footer > p{
+        font-size: 10pt ;
+        font-weight: 400;
+        text-rendering: optimizeLegibility;
 
 }
 
@@ -146,14 +162,58 @@ img{
     margin-right: auto;
 }
 
+.grid-item > img:hover{ 
+    opacity: 0.5;
+
+}
+
+.grid-item > img:focus{ 
+    opacity: 0.5;
+
+}
+
+/* For mobile phones: */
 @media screen and (min-width: 850px){
 
-    nav{
+    header{
 		flex-direction: column;
 		
     }
 
 }
+
+/* For Tablets: */
+@media (min-width: 768px) and (max-width: 1024px){
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    nav a {
+    padding-left: 15px;
+    padding-right: 15px;
+     }
+
+    .grid-item > img{ 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .gridcontainer {
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 200px 200px 200px;
+            row-gap: 10px;
+            column-gap: 5px;
+            } 
+
+    .grid-item{
+    margin-left: 10px;
+    grid-column: 1 span 1;
+}
+}
+
 
 .skip a{
     left: 0;

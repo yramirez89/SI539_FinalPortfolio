@@ -4,7 +4,22 @@ body {
     font-size: 15pt;
     font-family: 'Poppins', sans-serif;
     padding-top: 10px;
+    margin: 20px 32px 32px 32px;
   }
+
+#content {
+    position: relative;
+    }
+
+#content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 50px;
+    width: 50px;
+
+}
 
 h1 {
     font-weight: 600;
@@ -17,6 +32,10 @@ h1 {
     margin-bottom: 1em ;
   }
  
+#introtext {
+    padding-top: 20px;
+}
+
 .intro {
     font-weight: 700;
     font-style: normal;
@@ -53,6 +72,13 @@ p {
     margin-bottom: 1em;
 }
 
+/*.logo{
+    max-width: 15%;
+    float: left;
+    margin-top: -20px;
+}
+*/
+
 .button{
     margin-top: 5em;
     margin-bottom: 3em;
@@ -64,7 +90,8 @@ p {
 
 .button:hover{
     color: coral;
-    text-decoration: underline dashed #398AD7;
+    text-decoration: underline double #398AD7;
+    text-transform: uppercase;
     
 }
 
@@ -87,8 +114,10 @@ nav ul{
     align-items: center;
     justify-content: center;
     padding: 20px;
+    line-height: 1.1;
     
 }
+  
 
 .writings{
     font-size: 11pt;
@@ -117,23 +146,22 @@ nav a:hover{
 }
 
 nav .current{
-    text-decoration: underline double #398AD7;   
+    text-decoration: underline double #398AD7;
+    text-transform: uppercase;   
 }
 
 
 
 .footer{
-    position: absolute;
-    vertical-align: bottom;
+    display: block;
+    margin-top: 100px;
     
-
 }
 
 .footer > p{
         font-size: 10pt ;
         font-weight: 400;
         text-rendering: optimizeLegibility;
-
 }
 
 
@@ -185,6 +213,11 @@ img{
 /* For Tablets: */
 @media (min-width: 768px) and (max-width: 1024px){
 
+    .index{
+        margin: 80px 64px 48px 64px;
+
+    }
+    
     nav ul {
         display: flex;
         flex-direction: row;
@@ -195,25 +228,88 @@ img{
     padding-right: 15px;
      }
 
+    .container > img {
+        width: 40%;
+        height: auto;
+    }
+ 
+    .gridcontainer {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 200px 200px 200px;
+        row-gap: 10px;
+        column-gap: 5px;
+        } 
+
     .grid-item > img{ 
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
-    
-    .gridcontainer {
-            grid-template-columns: auto auto auto;
-            grid-template-rows: 200px 200px 200px;
-            row-gap: 10px;
-            column-gap: 5px;
-            } 
+        }
 
     .grid-item{
     margin-left: 10px;
     grid-column: 1 span 1;
 }
+     
 }
 
+
+
+/* For Labtop: */
+@media (min-width: 1030px){
+
+    .index{ 
+        margin: 80px 64px 48px 64px; 
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    nav a {
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+
+    .container {
+
+    padding: 40px 64px 48px 64px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    }
+      
+    .container > img {
+      margin: 20px 30px 0 0;
+      width: 275px;
+      object-fit: contain;
+      align-self: flex-start;
+      }
+
+    .container > h1 {
+        flex: 1 1 auto;
+    }
+
+    .gridcontainer {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 200px 200px 200px;
+        row-gap: 10px;
+        column-gap: 5px;
+        } 
+        
+    .grid-item > img{ 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+    .grid-item{
+    margin-left: 10px;
+    grid-column: 1 span 1;
+
+}
+}
 
 .skip a{
     left: 0;
@@ -229,17 +325,5 @@ img{
     top:10px;
     border: dashed 2px black;
 }
-
-#content {
-    position: relative;
-    }
-
-#content img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    height: 50px;
-    width: 50px;
 
 }

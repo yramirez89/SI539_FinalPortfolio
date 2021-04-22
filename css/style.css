@@ -173,12 +173,13 @@ p {
     color: #292929;
     padding: 7px 12px 7px 12px;
     display: inline-block;
-    margin-left: 122px;
     border-radius: 6px;  
     transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
     align-items: center;
-    justify-content: center;  
+    justify-content: center; 
+    margin-left: 8.4em ;
 }
+/* margin-left: 122px; */
       
 .CV:hover{
     background: #FFDE03; 
@@ -407,9 +408,10 @@ img{
   }
 
   .CV{
-    margin-left: 260px;  
+    margin-left: 19em;  
 
 }
+/* margin-left: 260px; */
 }
 
 /* For Labtop: */
@@ -556,14 +558,17 @@ img{
     transform: rotateY(180deg);
   }
 
-/* .Parallax { 
-	background-image: url(images/foto11.jpg); 
-	min-height: 200px; 
-	background-attachment: fixed; 
-	background-position: center; 
-	background-repeat: no-repeat; 
-	background-size: cover; 
-}  */
+.parallax { 
+	background-attachment:fixed;   
+    background-position: center; 
+    background-repeat: repeat; 
+    background-size: cover;       
+    color: white;
+    height: 900px;                
+    margin-bottom: 20px;
+    margin-left: 2em ;
+    background-image: url("../images/foto11.jpg");
+}
 
 
   @media screen and (prefers-reduced-motion: reduce){
@@ -581,5 +586,9 @@ img{
   .flip-card:focus .flip-card-inner {
      transform: none;
   }
+
+  .parallax{
+    background-attachment: initial;
   
     }
+}

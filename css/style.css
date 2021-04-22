@@ -1,4 +1,9 @@
-body {
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+  
+  body {
     padding: 1em;
     background-color:#ffffa4;
     font-size: 15pt;
@@ -16,8 +21,8 @@ body {
     top: 0;
     left: 0;
     display: block;
-    height: 50px;
-    width: 50px;
+    height: 65px;
+    width: 65px;
 
 }
 
@@ -54,8 +59,9 @@ h2 {
 }
 
 p {
-    font-size: 12pt;
-    font-weight: 200;
+    font-family: 'Inter', sans-serif;
+    font-size: 11.5pt;
+    font-weight: 300;
     line-height: 1.5em;
     text-rendering: optimizeLegibility;
     letter-spacing: 0em;
@@ -64,20 +70,65 @@ p {
 
 .email{
     font-size: 10pt;
-    font-weight: 200;
+    font-weight: 400;
     line-height: 2em;
     text-rendering: optimizeLegibility;
     letter-spacing: 0em;
-    margin-top: 1.5em;
+    margin-top: 3em;
     margin-bottom: 1em;
+    font-family: 'Poppins', sans-serif;
+    
+    
+}
+.pink{
+    color: #d90f74;
 }
 
+.workshops li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10pt;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+    margin-left: 2em;
+}
+
+.logo{
+	margin-top: 0%;
+	margin-left: 0%;
+	margin-bottom: 25px;
+	padding:2px 2px 2px 2px;
+	clear: left;
+	line-height: 8px;
+	font-weight: 600;
+	max-width: 100px;
+    animation: float 6s ease-in-out infinite;
+}
 /*.logo{
     max-width: 15%;
     float: left;
     margin-top: -20px;
 }
 */
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px #ffffa4;
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px #ffffa4;
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px #ffffa4;
+		transform: translatey(0px);
+	}
+
+}
+
 
 .button{
     margin-top: 5em;
@@ -86,6 +137,7 @@ p {
     font-weight: 600;
     color:#d90f74;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .button:hover{
@@ -100,12 +152,38 @@ p {
 }
 
 .re{font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.4;
     font-size: 11pt;
     margin-top: 1.5em ;
     margin-bottom: 1.5em;
     color: black;
+    text-decoration: none;
 }
+
+.re:hover{
+    color: coral;
+    text-decoration: underline double #398AD7;
+    
+}
+
+.CV{
+    border: 1.5px solid #053bff;
+    font-weight: 600;
+    text-decoration: none;
+    color: #292929;
+    padding: 7px 12px 7px 12px;
+    display: inline-block;
+    margin-left: 122px;
+    border-radius: 6px;  
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+    align-items: center;
+    justify-content: center;  
+}
+      
+.CV:hover{
+    background: #FFDE03; 
+    color: #0F0F0E; 
+      }
 
 nav ul{
 
@@ -117,20 +195,19 @@ nav ul{
     line-height: 1.1;
     
 }
-  
 
 .writings{
     font-size: 11pt;
     line-height: 1.6;
     margin-left: 2em;
+
 }
 
-.workshops{
-    font-size: 10pt;
-    font-weight: 200;
-    text-rendering: optimizeLegibility;
+.office-hours{
+    font-size: 11pt;
     line-height: 1.6;
     margin-left: 2em;
+    color: #053bff;
 }
 
 nav a{
@@ -178,19 +255,80 @@ img{
 
 .gridcontainer{
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 8px;
   grid-template-columns: auto;
   grid-template-rows: auto (repeat(9));
   margin: 25px;  
-}
   
+}
+
+.grid-item{
+    position:relative;
+}
+
 .grid-item > img{ 
     margin: 15px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    height: 100%;
+
 }
 
-.grid-item > img:hover{ 
+.grid-item .overlay {
+    background:#194bff;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    bottom: -15.40px;
+    right: 0;
+    opacity: 0;
+    width: 100%;
+    padding:0;
+    border-radius:10px
+  }
+  
+.grid-item:hover .overlay {
+    opacity: 0.6;
+  }
+
+
+.overlay-details {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 55%;
+    left: 50%;
+    opacity: 0;
+    padding-right: 40px;
+    padding-left: 40px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  } 
+
+.grid-item:hover .overlay-details{
+    opacity: 1;
+  }
+
+  .overlay-details h2{
+    font-size: 13pt;
+    color: #e7cbd9;
+    padding-right: 30px;
+    padding-left: 30px;
+    line-height: normal;
+    
+  }
+
+  .work-link{
+    text-decoration: none;
+    color: #e7cbd9;
+  }
+
+  .work-link:hover{
+    text-transform: uppercase;
+  }
+/*.grid-item > img:hover{ 
     opacity: 0.5;
 
 }
@@ -198,7 +336,7 @@ img{
 .grid-item > img:focus{ 
     opacity: 0.5;
 
-}
+} */ 
 
 /* For mobile phones: */
 @media screen and (min-width: 850px){
@@ -208,14 +346,20 @@ img{
 		
     }
 
+    
+
 }
 
 /* For Tablets: */
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px){
 
     .index{
         margin: 80px 64px 48px 64px;
 
+    }
+
+    .logo{
+        margin-left: 5%;
     }
     
     nav ul {
@@ -250,16 +394,40 @@ img{
     margin-left: 10px;
     grid-column: 1 span 1;
 }
-     
+
+.textcontainer{
+    padding: 40px 64px 48px 64px;
+
+}
+  
+.overlay-details h2{
+    font-size: 10.5pt;
+    color: #e7cbd9;
+  }
+
+  .CV{
+    margin: 0 0 0 0px;
+  }
 }
 
 
 
+
 /* For Labtop: */
-@media (min-width: 1030px){
+@media (min-width: 950px){
 
     .index{ 
         margin: 80px 64px 48px 64px; 
+    }
+
+    .logo{
+        margin-left: 6%;
+    }
+
+    #content img {
+        height: 80px;
+        width: 80px;
+    
     }
 
     nav ul {
@@ -306,9 +474,18 @@ img{
 
     .grid-item{
     margin-left: 10px;
-    grid-column: 1 span 1;
+    grid-column: 1 span 1;}
 
-}
+
+    .textcontainer{
+        padding: 40px 64px 48px 64px;
+
+    }
+
+    .overlay-details h2{
+        font-size: 12pt;
+        color: #e7cbd9;
+      }
 }
 
 .skip a{
@@ -326,4 +503,62 @@ img{
     border: dashed 2px black;
 }
 
-}
+/* Flip card container */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* hover flip effect*/
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  
+  /* Back side */
+  .flip-card-back {
+    font-family: 'Poppins', sans-serif;
+    background-color:#053bff;
+    color: #e7cbd9;
+    top: 40px;
+    transform: rotateY(180deg);
+  }
+
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; 
+    }
+
+    .logo{
+        animation: none;
+    }
+
+    .CV{
+        margin: 0 0 0 0px;
+      }
+  
+    }

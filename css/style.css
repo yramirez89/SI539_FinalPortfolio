@@ -486,6 +486,11 @@ img{
         font-size: 12pt;
         color: #e7cbd9;
       }
+
+    .CV{
+        margin: 0 0 0 0px;
+      } 
+
 }
 
 .skip a{
@@ -525,9 +530,13 @@ img{
   }
   
   /* hover flip effect*/
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:active .flip-card-inner,
+  .flip-card:focus .flip-card-inner {
+     transform: rotateY(180deg);
   }
+    
   
   /* Position the front and back side */
   .flip-card-front, .flip-card-back {
@@ -546,9 +555,11 @@ img{
     color: #e7cbd9;
     top: 40px;
     transform: rotateY(180deg);
+    
   }
 
-@media screen and (prefers-reduced-motion: reduce){
+
+  @media screen and (prefers-reduced-motion: reduce){
     html{
         scroll-behavior: auto; 
     }
@@ -557,8 +568,11 @@ img{
         animation: none;
     }
 
-    .CV{
-        margin: 0 0 0 0px;
-      }
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:active .flip-card-inner,
+  .flip-card:focus .flip-card-inner {
+     transform: none;
+  }
   
     }

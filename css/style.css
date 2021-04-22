@@ -351,7 +351,7 @@ img{
 }
 
 /* For Tablets: */
-@media (min-width: 768px){
+@media (min-width: 768px)and (max-width: 949px){
 
     .index{
         margin: 80px 64px 48px 64px;
@@ -406,12 +406,10 @@ img{
   }
 
   .CV{
-    margin: 0 0 0 0px;
-  }
+    margin-left: 260px;  
+
 }
-
-
-
+}
 
 /* For Labtop: */
 @media (min-width: 950px){
@@ -555,8 +553,16 @@ img{
     color: #e7cbd9;
     top: 40px;
     transform: rotateY(180deg);
-    
   }
+
+/* .Parallax { 
+	background-image: url(images/foto11.jpg); 
+	min-height: 200px; 
+	background-attachment: fixed; 
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: cover; 
+}  */
 
 
   @media screen and (prefers-reduced-motion: reduce){

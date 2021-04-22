@@ -182,6 +182,7 @@ p {
       
 .CV:hover{
     background: #FFDE03; 
+    text-decoration: underline #053bff;
     color: #0F0F0E; 
       }
 

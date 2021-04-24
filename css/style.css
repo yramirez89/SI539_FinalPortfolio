@@ -339,7 +339,6 @@ img{
     opacity: 0.5;
 
 } */ 
-
 .skip a{
     left: 0;
     padding: 6px;
@@ -417,25 +416,42 @@ img{
 }
 
 
-/* For mobile phones: */
+  @media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; 
+    }
+
+    .logo{
+        animation: none;
+    }
+
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:active .flip-card-inner,
+  .flip-card:focus .flip-card-inner {
+     transform: none;
+  }
+
+  .parallax{
+    background-attachment: initial;
+  
+    }
+    /* For mobile phones: */
 @media screen and (min-width: 850px){
 
     header{
 		flex-direction: column;
 		
     }
-
     .flip-card {
         background-color: transparent;
-        width: 100px;
-        height: 100px;
+        width: 175px;
+        height: 175px;
         perspective: 1000px;
         margin-top: 15px;
         margin-left: auto;
         margin-right: auto;
       }
-    
-
 }
 
 /* For Tablets: */
@@ -455,10 +471,11 @@ img{
         flex-direction: row;
         justify-content: flex-end;
     }
+
     nav a {
     padding-left: 15px;
     padding-right: 15px;
-     }
+    }
 
     .container > img {
         width: 40%;
@@ -485,7 +502,6 @@ img{
 
 .textcontainer{
     padding: 40px 64px 48px 64px;
-
 }
   
 .overlay-details h2{
@@ -493,7 +509,7 @@ img{
     color: #e7cbd9;
   }
 
-  .CV{
+.CV{
     margin: 0 0 0 0px;
 }
 /* margin-left: 260px; */
@@ -579,28 +595,6 @@ img{
     .CV{
             margin: 0 0 0 0px;
     }
-
 }
 
-
-  @media screen and (prefers-reduced-motion: reduce){
-    html{
-        scroll-behavior: auto; 
-    }
-
-    .logo{
-        animation: none;
-    }
-
-  .flip-card:hover .flip-card-inner,
-  .flip-card:focus-within .flip-card-inner,
-  .flip-card:active .flip-card-inner,
-  .flip-card:focus .flip-card-inner {
-     transform: none;
-  }
-
-  .parallax{
-    background-attachment: initial;
-  
-    }
 }

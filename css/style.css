@@ -443,6 +443,7 @@ img{
 		flex-direction: column;
 		
     }
+
     .flip-card {
         background-color: transparent;
         width: 175px;
@@ -512,6 +513,7 @@ img{
 .CV{
     margin: 0 0 0 0px;
 }
+
 /* margin-left: 260px; */
 }
 
